@@ -1,0 +1,1004 @@
+/* Custom styles */
+:root {
+    --primary-color: #1a5f7a;
+    --secondary-color: #2c8c99;
+    --accent-color: #57cc99;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 80px;
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Main Container - Improved with consistent padding */
+.main-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    width: 100%;
+}
+
+/* Navbar Styling - Fixed spacing issues */
+.navbar {
+    background-color: #4576be;
+    transition: all 0.3s ease;
+    padding: 0 !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+}
+
+.navbar>.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px !important;
+    height: 80px;
+}
+
+.navbar-brand img.logo {
+    height: 60px;
+    max-width: 220px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+/* Improved Navbar Spacing */
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+.navbar-nav {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.navbar-nav .nav-item {
+    position: relative;
+    height: 100%;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-weight: 600;
+    padding: 0 16px !important;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    display: flex !important;
+    align-items: center;
+    height: 100%;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 !important;
+    white-space: nowrap;
+    position: relative;
+}
+
+/* Hover effect - full coverage */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link.show {
+    background-color: #375e98 !important;
+    color: #fff !important;
+}
+
+/* Dropdown styling for hover - ARROW REMOVED */
+.dropdown-toggle::after {
+    display: none !important;
+    /* Arrow removed */
+}
+
+/* Dropdown menu styling - HOVER BASED */
+.dropdown-menu {
+    background-color: #375e98 !important;
+    border: none;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 6px 6px;
+    padding: 0;
+    margin-top: 0;
+    min-width: 220px;
+    border-top: 3px solid #2d4a7a;
+    display: block !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    transform: translateY(10px);
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    padding: 14px 20px;
+    color: white !important;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 13.5px;
+    font-weight: 500;
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.dropdown-item:hover {
+    background-color: #2d4a7a !important;
+    color: white !important;
+    padding-left: 25px;
+}
+
+/* Toggler button */
+.navbar-toggler {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 12px;
+    margin-left: 15px;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+/* Image Slider - Centered with margins */
+.image-slider {
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.slider-container {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+}
+
+.slider-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
+}
+
+.slider-image.active {
+    opacity: 1;
+}
+
+/* Product Cards Section - Improved spacing */
+.featured-products {
+    padding: 70px 0;
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: 15px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Product Grid - Improved with better spacing */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 100%;
+}
+
+/* Product Card - Improved design */
+.product-card {
+    background: white;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Product Image */
+.product-image {
+    height: 75%;
+    overflow: hidden;
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+/* Product Details */
+.product-details {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 70px;
+    background: white;
+}
+
+.product-title {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    color: #333;
+}
+
+.product-title a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    display: block;
+    padding: 5px 0;
+}
+
+.product-title a:hover {
+    color: #4576be;
+}
+
+/* About Us Section */
+.aboutus {
+    padding: 80px 0;
+    background: url(./Assets/22.jpg);
+    position: relative;
+}
+
+.aboutus h2 {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+.about_box {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+}
+
+.about_box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.about_contents {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 30px;
+    text-align: justify;
+    /* Add these properties to prevent overflow */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
+}
+
+.about_contents br {
+    display: block;
+    margin: 10px 0;
+    content: "";
+}
+
+.btn-info.view-all {
+    background-color: #4576be;
+    border-color: #4576be;
+    color: white;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-info.view-all:hover {
+    background-color: #375e98;
+    border-color: #375e98;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styles - Updated Semantic Version */
+.footer {
+    background-color: #4576be;
+    color: white;
+    padding: 50px 0 20px;
+    margin-top: 0;
+}
+
+.footer .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Social Icons */
+.social-media {
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover .social-icon {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+/* Contact Information */
+.contact-info {
+    margin: 10px 0;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #bdc3c7;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.contact-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.contact-item a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* Copyright Information */
+.copyright-info {
+    margin-top: 10px;
+}
+
+.copyright-info p {
+    color:white;
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.copyright-info a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.copyright-info a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Visually hidden for accessibility */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Translation Widget */
+.translate-widget {
+    margin-top: 30px;
+    background-color: #555555;
+    padding: 10px 0;
+    width: 100%;
+}
+
+#MicrosoftTranslatorWidget {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Contact Us Section */
+.contact-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+.contact-header {
+    text-align: center;
+}
+
+.contact-header h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #333;
+    padding-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Update the contact-icon styles for images */
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.contact-icon img {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(31%) sepia(0%) saturate(0%) hue-rotate(240deg) brightness(94%) contrast(88%);
+}
+
+.contact-icon .glyphicon {
+    font-size: 32px;
+    color: white;
+}
+
+.contact-item-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #4E4E4E;
+}
+
+.contact-item-text {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.contact-item-text a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item-text a:hover {
+    color: #8a8a8a;
+    text-decoration: underline;
+}
+
+/* Responsive for Contact Section */
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .contact-section {
+        padding: 60px 0;
+    }
+
+    .contact-header h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        max-width: 500px;
+    }
+
+    .contact-section {
+        padding: 50px 0;
+    }
+
+    .contact-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact-item {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-section {
+        padding: 40px 0;
+    }
+
+    .contact-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .contact-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .contact-icon .glyphicon {
+        font-size: 28px;
+    }
+}
+
+/* Responsive Design - Improved */
+@media (max-width: 1400px) {
+    .main-container {
+        max-width: 1200px;
+        padding: 0 30px;
+    }
+
+    .navbar>.main-container {
+        padding: 0 30px !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0 14px !important;
+        font-size: 13.5px;
+    }
+
+    .about_box {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .navbar-nav .nav-link {
+        padding: 0 12px !important;
+        font-size: 13px;
+    }
+
+    .main-container {
+        padding: 0 25px;
+    }
+
+    .navbar>.main-container {
+        padding: 0 25px !important;
+    }
+
+    .about_contents {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    body {
+        padding-top: 70px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .navbar {
+        padding: 0 !important;
+        height: 70px;
+    }
+
+    .navbar>.main-container {
+        height: 70px;
+        padding: 0 20px !important;
+    }
+
+    .navbar-brand img.logo {
+        height: 50px;
+        max-width: 180px;
+    }
+
+    .navbar-toggler {
+        margin-left: 10px;
+    }
+
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #4576be;
+        padding: 0;
+        z-index: 1000;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-nav {
+        height: auto !important;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .navbar-nav .nav-item {
+        height: auto !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-nav .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 16px 20px !important;
+        height: auto !important;
+        font-size: 15px;
+        justify-content: space-between;
+    }
+
+    /* Mobile dropdown behavior */
+    .dropdown-menu {
+        background-color: #2d4a7a !important;
+        position: static !important;
+        float: none !important;
+        width: 100% !important;
+        margin-top: 0;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+        border-top: none;
+        display: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .dropdown-menu.show {
+        display: block !important;
+    }
+
+    .dropdown-item {
+        padding-left: 35px !important;
+        font-size: 14px;
+    }
+
+    /* Disable hover on mobile */
+    .dropdown:hover .dropdown-menu {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+    }
+
+    .image-slider {
+        height: 450px;
+    }
+
+    .featured-products {
+        padding: 50px 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .product-image {
+        height: 200px;
+    }
+
+    /* About Us Responsive */
+    .aboutus {
+        padding: 60px 0;
+    }
+
+    .aboutus h2 {
+        font-size: 2rem;
+    }
+
+    .about_box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about_box img {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .about_contents {
+        text-align: left;
+    }
+
+    /* Footer Responsive */
+    .footer {
+        padding: 40px 0 15px;
+    }
+    
+    .social-icons {
+        gap: 15px;
+    }
+    
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .contact-item {
+        font-size: 0.95rem;
+    }
+    
+    #MicrosoftTranslatorWidget {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .main-container {
+        padding: 0 20px;
+    }
+
+    .navbar>.main-container {
+        padding: 0 20px !important;
+    }
+
+    .footer {
+        padding: 35px 0 15px;
+    }
+    
+    .footer .main-container {
+        padding: 0 20px;
+    }
+    
+    .social-icons {
+        gap: 12px;
+    }
+    
+    .social-icon {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .contact-details {
+        gap: 10px;
+    }
+    
+    .contact-item {
+        font-size: 0.9rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .copyright-info p {
+        font-size: 0.85rem;
+    }
+    
+    #MicrosoftTranslatorWidget {
+        padding: 0 20px;
+    }
+
+    .aboutus {
+        padding: 50px 0;
+    }
+
+    .aboutus h2 {
+        font-size: 1.8rem;
+    }
+
+    .about_contents {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 576px) {
+    .image-slider {
+        height: 350px;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .featured-products {
+        padding: 40px 0;
+    }
+
+    .main-container {
+        padding: 0 15px;
+    }
+
+    .navbar>.main-container {
+        padding: 0 15px !important;
+    }
+
+    .navbar-brand img.logo {
+        max-width: 160px;
+    }
+
+    .product-image {
+        height: 180px;
+    }
+
+    .aboutus {
+        padding: 40px 0;
+    }
+
+    .aboutus h2 {
+        font-size: 1.6rem;
+    }
+
+    .btn-info.view-all {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+
+    /* Footer Responsive */
+    .footer {
+        padding: 30px 0 10px;
+    }
+    
+    .social-icons {
+        gap: 10px;
+    }
+    
+    .social-icon {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .contact-item {
+        font-size: 0.85rem;
+    }
+    
+    .contact-icon {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .copyright-info p {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+}
